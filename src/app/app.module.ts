@@ -16,6 +16,7 @@ import { CategoryShowPage } from '../pages/category-show/category-show';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategogieService } from './services/categogie.service';
+import { Push } from '../../node_modules/@ionic-native/push';
 
 
 @NgModule({
@@ -47,6 +48,7 @@ import { CategogieService } from './services/categogie.service';
     HttpClientModule,
     CategogieService,
     InAppBrowser,
+    Push,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
