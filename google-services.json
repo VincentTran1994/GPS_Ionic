@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "798190472120",
+    "firebase_url": "https://gpsmobile-b743e.firebaseio.com",
+    "project_id": "gpsmobile-b743e",
+    "storage_bucket": "gpsmobile-b743e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:798190472120:android:ed203091e57b266a",
+        "android_client_info": {
+          "package_name": "com.angularFirebase.GPS"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "798190472120-376iiobl431tope2dua4bevk9i53jhed.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDK6TOhdrKYXpjwZW2SPDeksUGLODKaUuY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
