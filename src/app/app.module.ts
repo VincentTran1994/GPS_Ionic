@@ -11,12 +11,15 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CategoryShowPage } from '../pages/category-show/category-show';
+import { MenuShowPage } from '../pages/menu-show/menu-show';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategogieService } from './services/categogie.service';
 import { Push } from '../../node_modules/@ionic-native/push';
+
+
 
 
 @NgModule({
@@ -26,7 +29,8 @@ import { Push } from '../../node_modules/@ionic-native/push';
     ContactPage,
     HomePage,
     TabsPage,
-    CategoryShowPage
+    CategoryShowPage,
+    MenuShowPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,8 @@ import { Push } from '../../node_modules/@ionic-native/push';
     ContactPage,
     HomePage,
     TabsPage,
-    CategoryShowPage
+    CategoryShowPage,
+    MenuShowPage
   ],
   providers: [
     StatusBar,

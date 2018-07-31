@@ -13,4 +13,11 @@ export class CategogieService{
             {responseType: 'text'}
         );
     }
+
+    getMoreData(url){
+        return this.httpClient.get(
+            url, 
+            {responseType: 'text'}
+        );
+    }
 }

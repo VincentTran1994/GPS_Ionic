@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InAppBrowser } from '../../../node_modules/@ionic-native/in-app-browser';
+import { MenuShowPage } from '../menu-show/menu-show';
+
 /**
  * Generated class for the CategoryShowPage page.
  *
@@ -30,8 +32,8 @@ export class CategoryShowPage {
 
   //on click event
   openInAppBrowser(url){
-    const browser = this.inAppBrowser.create(url);
-
+    // const browser = this.inAppBrowser.create(url);
+    this.navCtrl.push(MenuShowPage, url);
     // browser.close();
   }
 }
