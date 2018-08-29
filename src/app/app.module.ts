@@ -24,8 +24,6 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategogieService } from './services/categogie.service';
 import { CatelogyImagesProvider } from './services/catelogy-images';
-import { MeduShowPage } from '../pages/medu-show/medu-show';
-import { Push } from '../../node_modules/@ionic-native/push';
 import { EmailComposer } from '../../node_modules/@ionic-native/email-composer';
 
 
@@ -47,7 +45,7 @@ const fireBaseConfig = {
     HomePage,
     TabsPage,
     CategoryShowPage,
-    MeduShowPage
+    MenuShowPage
   ],
   imports: [
     BrowserModule,
@@ -76,7 +74,6 @@ const fireBaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Firebase,
     FcmProvider,
-    Push,
     EmailComposer,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { MeduShowPage } from '../medu-show/medu-show';
+import { MenuShowPage } from '../menu-show/menu-show';
+
 /**
  * Generated class for the CategoryShowPage page.
  *
