@@ -45,7 +45,6 @@ export class HomePage implements OnInit{
 
   constructor(public navCtrl: NavController, 
               private httpClient: CategogieService, 
-              
               public popoverCtrl: PopoverController) {
 
   }

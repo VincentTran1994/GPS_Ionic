@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { InAppBrowser } from '../../../node_modules/@ionic-native/in-app-browser';
+import { MeduShowPage } from '../medu-show/medu-show';
 /**
  * Generated class for the CategoryShowPage page.
  *
@@ -18,7 +18,6 @@ export class CategoryShowPage {
   public title: any;
 
   constructor(public navCtrl: NavController,
-              private inAppBrowser: InAppBrowser,
               public navParams: NavParams) {
   }
 
@@ -30,8 +29,8 @@ export class CategoryShowPage {
 
   //on click event
   openInAppBrowser(url){
-    const browser = this.inAppBrowser.create(url);
-
+    // const browser = this.inAppBrowser.create(url);
+    this.navCtrl.push(MeduShowPage, url);
     // browser.close();
   }
 }

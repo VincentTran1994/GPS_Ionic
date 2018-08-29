@@ -5,6 +5,12 @@ import { MyApp } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { Firebase } from '@ionic-native/firebase';
+import { FcmProvider } from '../providers/fcm/fcm';
+
+
 
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
@@ -16,7 +22,18 @@ import { CategoryShowPage } from '../pages/category-show/category-show';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategogieService } from './services/categogie.service';
+import { CatelogyImagesProvider } from './services/catelogy-images';
+import { MeduShowPage } from '../pages/medu-show/medu-show';
 
+
+const fireBaseConfig = {
+  apiKey: "AIzaSyB_qw1TkFV3bkpNNdN_NsQ7drJBM4hzSqU",
+  authDomain: "gpsmobile-b743e.firebaseapp.com",
+  databaseURL: "https://gpsmobile-b743e.firebaseio.com",
+  projectId: "gpsmobile-b743e",
+  storageBucket: "gpsmobile-b743e.appspot.com",
+  messagingSenderId: "798190472120"
+};
 
 @NgModule({
   declarations: [
@@ -25,12 +42,15 @@ import { CategogieService } from './services/categogie.service';
     ContactPage,
     HomePage,
     TabsPage,
-    CategoryShowPage
+    CategoryShowPage,
+    MeduShowPage
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    AngularFireModule.initializeApp(fireBaseConfig),
+    AngularFirestoreModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -39,7 +59,8 @@ import { CategogieService } from './services/categogie.service';
     ContactPage,
     HomePage,
     TabsPage,
-    CategoryShowPage
+    CategoryShowPage,
+    MeduShowPage
   ],
   providers: [
     StatusBar,
@@ -47,7 +68,10 @@ import { CategogieService } from './services/categogie.service';
     HttpClientModule,
     CategogieService,
     InAppBrowser,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    CatelogyImagesProvider,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Firebase,
+    FcmProvider
   ]
 })
 export class AppModule {}
