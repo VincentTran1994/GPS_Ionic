@@ -18,6 +18,7 @@ export class CategoryShowPage {
   public title: any;
 
   constructor(public navCtrl: NavController,
+              // private inAppBrowser: InAppBrowser,
               public navParams: NavParams) {
   }
 
@@ -30,7 +31,7 @@ export class CategoryShowPage {
   //on click event
   openInAppBrowser(url){
     // const browser = this.inAppBrowser.create(url);
-    this.navCtrl.push(MeduShowPage, url);
+    this.navCtrl.push(MenuShowPage, url);
     // browser.close();
   }
 }

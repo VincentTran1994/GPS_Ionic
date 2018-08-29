@@ -1,17 +1,42 @@
-<ion-header >
+<ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Contact
+      Contact Us
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+  <ion-row>
+
+    <ion-col col-12>
+      <!-- <ion-img width="100%" src=""/> -->
+    </ion-col>
+
+    <!-- input field -->
+    <ion-col col-12>
+      <ion-list>
+
+        <ion-item>
+          <ion-label stacked>Full Name</ion-label>
+          <ion-input [(ngModel)]="fullName" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Phone Number</ion-label>
+          <ion-input [(ngModel)]="phoneNumber" type="text"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked aria-autocomplete="both">Your Message</ion-label>
+          <ion-textarea [(ngModel)]="message" style="height:100px;"></ion-textarea>
+        </ion-item>
+
+        <!-- <ion-item> -->
+          <button type="submit" ion-button full style="border-radius: 10px;" (click)="onSubmit()">Submit</button>
+        <!-- </ion-item> -->
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
 </ion-content>

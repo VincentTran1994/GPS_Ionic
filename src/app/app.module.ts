@@ -17,6 +17,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { CategoryShowPage } from '../pages/category-show/category-show';
+import { MenuShowPage } from '../pages/menu-show/menu-show';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -24,6 +25,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { CategogieService } from './services/categogie.service';
 import { CatelogyImagesProvider } from './services/catelogy-images';
 import { MeduShowPage } from '../pages/medu-show/medu-show';
+import { Push } from '../../node_modules/@ionic-native/push';
+import { EmailComposer } from '../../node_modules/@ionic-native/email-composer';
+
 
 
 const fireBaseConfig = {
@@ -60,7 +64,7 @@ const fireBaseConfig = {
     HomePage,
     TabsPage,
     CategoryShowPage,
-    MeduShowPage
+    MenuShowPage
   ],
   providers: [
     StatusBar,
@@ -71,7 +75,10 @@ const fireBaseConfig = {
     CatelogyImagesProvider,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     Firebase,
-    FcmProvider
+    FcmProvider,
+    Push,
+    EmailComposer,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
